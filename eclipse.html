@@ -18,6 +18,7 @@
 			  font-family: 'League Spartan';
               line-height: 1.2;
         overflow-x: hidden;
+        height: 99.9vh;
       }
 
       /* Navbar styling */
@@ -33,7 +34,7 @@
         align-items: center;
         background-color: #ffffff1f;
         backdrop-filter: blur(10px); /* Blur effect */
-        animation: onloadh1 2s ease-in-out forwards;
+        animation: onloadh1 3.5s ease-in-out forwards;
       }
 
 
@@ -97,7 +98,7 @@
       .image-container {
         position: relative;
         width: 100%;
-        height: 100vh; /* Full screen height */
+        height: 99.9vh; /* Full screen height */
         overflow: hidden;
         display: flex;
         justify-content: center;  /* Center horizontally */
@@ -109,7 +110,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        animation: zoomOut 2s ease-out forwards;
+        animation: zoomOut 3.5s ease-out forwards;
       }
 
       @keyframes zoomOut {
@@ -130,7 +131,7 @@
           transform: translateX(-50%); /* Only affects X-axis */
           color: rgb(0, 0, 0);
           text-align: center;
-          animation: onloadh2 2s ease-in-out forwards;
+          animation: onloadh2 3.5s ease-in-out forwards;
       }
 
       @keyframes onloadh2 {
@@ -170,7 +171,7 @@
         left: 2%;     /* Position it closer to the left side (adjust as needed) */
         color: rgb(255, 255, 255);
         text-align: center;
-        animation: onloadh3 2s ease-in-out forwards;
+        animation: onloadh3 3.5s ease-in-out forwards;
         background: transparent;
         width: 150px;
         height: 150px;
@@ -178,6 +179,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        
     }
     @keyframes onloadh3 {
           0% {
@@ -237,7 +239,49 @@
         margin-top: 10px;
 
       }
+      .cover {
+    width: 100%;
+    background-color: rgb(44, 30, 30);
+    z-index: 99999;
+    position: absolute;
+    
+    /* Centering content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh; /* Initial full screen height */
+    animation: onloadh4 1.5s ease-in-out forwards;
+}
 
+h1 {
+    color: white; /* Make text visible */
+    font-size: 9rem;
+    opacity: 1;
+    animation: fadeOutText 1s ease-in-out forwards 0.5s; /* Delays text fade out */
+}
+
+/* Cover Animation */
+@keyframes onloadh4 {
+    0% {
+        margin-top: -100vh;
+        height: 100vh;
+    }
+    100% {
+        margin-top: 0;
+        height: 0;
+    }
+}
+
+/* Text Opacity Animation */
+@keyframes fadeOutText {
+    0% {
+        font-size: 9rem;
+    }
+    100% {
+      font-size: 0.1rem;
+    }
+}
 
 
     </style>
@@ -264,17 +308,19 @@
 
     <!-- Landing image -->
     <div class="image-container">
-        <img src="product.png" alt="Landing Image" class="landing-image">
+        <img src="C:\Users\91629\OneDrive\Desktop\product.png" alt="Landing Image" class="landing-image">
         <div class="home">
           <p class="home-p1">ECLIPSE</p>
           <p class="home-p2">You will stay on top of the fashion trends</p>
         </div>
         <div class="hometext">
           <div class="hometext1"><h1 style="font-size: 15px;margin-top:15px; text-align: left;padding: 10px;">Discover Radiance with the GlowEssence</h1><p style="font-size: 12px;padding: 10px;text-align: left;">Unveil your skin’s natural glow with GlowEssence Serum, a luxurious blend of nourishing ingredients designed to hydrate, brighten, and restore your skin’s youthful appearance. Packed with Vitamin C, Hyaluronic Acid, and Antioxidants, this serum penetrates deep into the skin, providing intense moisture and targeting dark spots, fine lines, and uneven skin tone.</p></div>
-          <div class="hometext2"><img style="width: 100%;height: auto;border-radius: 10px;" src="mini-product.jpg" alt=""></div>
+          <div class="hometext2"><img style="width: 100%;height: auto;border-radius: 10px;" src="C:\Users\91629\OneDrive\Desktop\mini-product.jpg" alt=""></div>
           <div class="hometext3"><i style="font-size: 24px;" class="fas fa-leaf"></i><p style="font-size: 14px;margin-top: 10px;">Whether you're looking for a smoother, more radiant complexion or simply want to refresh your skin, GlowEssence is the perfect addition to your skincare routine.</p></div>
         </div>
     </div>
+
+    <div class="cover"><h1>ECLIPSE</h1></div>
 
     <script>
       window.onload = function() {
